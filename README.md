@@ -1,2 +1,2 @@
 # UnitConverter
-Unit Converter Web App Project
+Unit Converter Project
