@@ -1,2 +1,2 @@
 # UnitConverter
-Unit Converter Project in Scrimba
+Unit Converter Web App Project
