@@ -11,13 +11,17 @@
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-green-300: oklch(87.1% 0.15 154.449);
+    --color-black: #000;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
+    --font-weight-extralight: 200;
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-lato: "Lato", "Arial";
@@ -171,17 +175,50 @@
   }
 }
 @layer utilities {
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-\[14px\] {
+    margin-block: 14px;
+  }
+  .my-\[16px\] {
+    margin-block: 16px;
+  }
+  .mt-\[16px\] {
+    margin-top: 16px;
+  }
+  .mb-\[27px\] {
+    margin-bottom: 27px;
+  }
   .flex {
     display: flex;
   }
   .table {
     display: table;
   }
+  .h-\[45px\] {
+    height: 45px;
+  }
+  .h-\[50px\] {
+    height: 50px;
+  }
+  .h-\[177px\] {
+    height: 177px;
+  }
   .h-\[480px\] {
     height: 480px;
   }
   .h-screen {
     height: 100vh;
+  }
+  .w-\[110px\] {
+    width: 110px;
+  }
+  .w-\[120px\] {
+    width: 120px;
+  }
+  .w-\[270px\] {
+    width: 270px;
   }
   .w-\[720px\] {
     width: 720px;
@@ -192,8 +229,20 @@
   .resize {
     resize: both;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
+  }
+  .justify-between {
+    justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
@@ -201,48 +250,33 @@
   .rounded-\[10px\] {
     border-radius: 10px;
   }
+  .rounded-\[25px\] {
+    border-radius: 25px;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-amber-400 {
-    background-color: var(--color-amber-400);
+  .border-black {
+    border-color: var(--color-black);
+  }
+  .border-gray-custom {
+    border-color: var(--color-gray-custom);
+  }
+  .bg-amber-700 {
+    background-color: var(--color-amber-700);
   }
   .bg-gray-custom {
     background-color: var(--color-gray-custom);
   }
-  .bg-green-300 {
-    background-color: var(--color-green-300);
-  }
-  .bg-red-400 {
-    background-color: var(--color-red-400);
-  }
-  .bg-red-500 {
-    background-color: var(--color-red-500);
-  }
   .bg-white-custom {
     background-color: var(--color-white-custom);
-  }
-  .px-\[15px\] {
-    padding-inline: 15px;
-  }
-  .px-\[50px\] {
-    padding-inline: 50px;
-  }
-  .px-\[60px\] {
-    padding-inline: 60px;
   }
   .px-\[100px\] {
     padding-inline: 100px;
   }
-  .py-\[5px\] {
-    padding-block: 5px;
-  }
   .py-\[20px\] {
     padding-block: 20px;
-  }
-  .py-\[25px\] {
-    padding-block: 25px;
   }
   .text-center {
     text-align: center;
@@ -253,23 +287,16 @@
   .font-lato {
     font-family: var(--font-lato);
   }
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
   .text-\[40px\] {
     font-size: 40px;
   }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
   }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
+  .font-extralight {
+    --tw-font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -279,8 +306,17 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-gray-custom {
+    color: var(--color-gray-custom);
+  }
+  .text-white-custom {
+    color: var(--color-white-custom);
+  }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-80 {
+    opacity: 80%;
   }
   .outline {
     outline-style: var(--tw-outline-style);
