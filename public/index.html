@@ -7,17 +7,32 @@
     <title>Unit Converter</title>
 </head>
 <body class="bg-gray-custom">
-    <div class="flex h-screen justify-center align-middle items-center">
-        <div class="w-[720px] h-[480px] bg-white-custom rounded-[10px] px-[100px] py-[20px]">
-            <div class="flex flex-col justify-center items-center align-middle font-lato">
-                <div class="w-[270px] h-[177px] flex flex-col mb-[27px]">
-                    <h1 class="text-center text-[40px] text-gray-custom">Unit Converter</h1>
-                    <div class="flex justify-center align-middle items-center rounded-[25px] border border-gray-custom mx-auto my-[16px]">
-                        <div class="w-[120px] h-[50px]"></div>
+    <div class="flex h-screen justify-center items-center">
+        <div class="w-[720px] h-[480px] bg-white-custom rounded-[10px] px-[100px] py-[20px] flex justify-center items-center">
+            <div class="w-[480px] h-[445px] flex flex-col justify-center items-center font-lato">
+                <div class="w-full max-w-[270px] h-[177px] flex flex-col mb-[27px]">
+                    <h1 class="text-center text-[40px] text-gray-custom font-semibold">Unit Converter</h1>
+                    <div class="flex justify-center items-center rounded-[25px] border border-gray-custom mx-auto my-[10px]">
+                        <div id="input-el" contenteditable="true" class="w-[120px] h-[50px] text-[24px] leading-[50px] flex justify-center items-center text-center outline-0"></div>
                     </div>
-                    <div class="flex justify-between font-semibold">
-                        <button class="w-[110px] h-[45px] bg-gray-custom opacity-80 text-white-custom rounded-[10px]">CONVERT</button>
-                        <button class="w-[110px] h-[45px] bg-gray-custom opacity-80 text-white-custom rounded-[10px]">RESET</button>
+                    <div class="flex justify-center gap-[50px] font-semibold">
+                        <button id="convert-el" class="w-[110px] h-[45px] bg-gray-custom opacity-80 text-white-custom rounded-[10px] active:scale-90 transform duration-150 ease-in-out hover:cursor-pointer">CONVERT</button>
+                        <button id="reset-el" class="w-[110px] h-[45px] bg-gray-custom opacity-80 text-white-custom rounded-[10px] active:scale-90 transform duration-150 ease-in-out hover:cursor-pointer">RESET</button>
+                    </div>
+                </div>
+
+                <div class="flex flex-col w-[480px] h-[240px]">
+                    <div class="h-[70px] bg-gray-custom2 rounded-[10px] text-[12px] font-semibold mb-[16px] flex flex-col text-center">
+                        <p class="text-gray-custom">Mass (Kilograms/Pounds)</p>
+                        <p id="mass-el" class="p-[5px] text-lg"></p>
+                    </div>
+                    <div class="h-[70px] bg-gray-custom2 rounded-[10px] text-[12px] font-semibold mb-[16px] flex flex-col text-center">
+                        <p class="text-gray-custom">Length (Meters/Feet)</p>
+                        <p id="length-el" class="p-[5px] text-lg"></p>
+                    </div>
+                    <div class="h-[70px] bg-gray-custom2 rounded-[10px] text-[12px] font-semibold mb-[16px] flex flex-col text-center">
+                        <p class="text-gray-custom">Volume (Liters/Gallons)</p>
+                        <p id="volume-el" class="p-[5px] text-lg"></p>
                     </div>
                 </div>
             </div>
